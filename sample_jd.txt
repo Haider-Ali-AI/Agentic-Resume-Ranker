@@ -1,0 +1,19 @@
+Title: AI/Machine Learning Engineer (Junior to Mid-Level)
+
+Problem Statement: A start-up HR company wants to automatically rank resumes based on how closely they match a given job description.
+
+We are seeking a proactive AI Engineer to join our team, focusing on building and optimizing data-driven solutions. The ideal candidate will have strong experience in Python programming and a deep understanding of core Machine Learning principles.
+
+Key Responsibilities:
+* Design, develop, and deploy NLP (Natural Language Processing) models for text classification and entity recognition.
+* Implement data pipelines using tools like Pandas and NumPy for robust data analysis and cleaning.
+* Work with large datasets stored in SQL databases.
+* Optimize model performance using techniques like hyperparameter tuning and model compression.
+* Collaborate with the DevOps team to integrate models into production environments (deployment).
+
+Required Skills and Qualifications:
+* Proficiency in Python (required) and relevant ML libraries (Scikit-learn, TensorFlow or PyTorch).
+* Solid foundation in statistics and linear algebra.
+* Experience with text pre-processing and tokenization techniques (e.g., NLTK).
+* Familiarity with cloud platforms (AWS, Azure, or GCP) is a plus.
+* Bachelor’s or Master’s degree in Computer Science, Engineering, or a related field.

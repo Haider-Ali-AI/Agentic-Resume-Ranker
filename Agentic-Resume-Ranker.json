@@ -1,0 +1,603 @@
+{
+  "name": "Agentic-Resume-Ranker",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1fFQSUE6a5sdSpeMGu0t6CxU1Jl8e7tResPTJbvPpQf0",
+          "mode": "list",
+          "cachedResultName": "Resume Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fFQSUE6a5sdSpeMGu0t6CxU1Jl8e7tResPTJbvPpQf0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fFQSUE6a5sdSpeMGu0t6CxU1Jl8e7tResPTJbvPpQf0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "#",
+              "displayName": "#",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Job Description",
+              "displayName": "Job Description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Role",
+              "displayName": "Role",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Matched Keywords",
+              "displayName": "Matched Keywords",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Missing Keywords",
+              "displayName": "Missing Keywords",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Match Count",
+              "displayName": "Match Count",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Total Keywords",
+              "displayName": "Total Keywords",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Match %",
+              "displayName": "Match %",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Relevance",
+              "displayName": "Relevance",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Rank",
+              "displayName": "Rank",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Cosine Similarity",
+              "displayName": "Cosine Similarity",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Experience Years",
+              "displayName": "Experience Years",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Education Score",
+              "displayName": "Education Score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Total Score",
+              "displayName": "Total Score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1920,
+        152
+      ],
+      "id": "751480f4-fdb4-4e76-bf1c-91be92637bc0",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleApi": {
+          "id": "l8DihPEEZpZGiAA1",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        352,
+        152
+      ],
+      "id": "cfa69cd2-24ca-408b-a265-7a109d324662",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:/Users/msi/Desktop/resumes/*.pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        576,
+        152
+      ],
+      "id": "da77efc9-523d-4298-9de9-a6ec3b0daa0d",
+      "name": "Read/Write Files from Disk"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1024,
+        80
+      ],
+      "id": "c5ec35d7-3e79-4125-83d4-f35a380c56bd",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        800,
+        152
+      ],
+      "id": "46eda166-3e9d-4dba-80f1-8a0e6244079c",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the raw text (from the previous node)\n\nlet text = $input.first().json.text || '';\n\n// Clean up unwanted characters, line breaks, and symbols\ntext = text\n  .replace(/\\r?\\n+/g, ' ')        // Replace all newlines with a space\n  .replace(/\\t+/g, ' ')           // Replace tabs with spaces\n  .replace(/\\s{2,}/g, ' ')        // Collapse multiple spaces into one\n  .replace(/[*_`#\\[\\]()|\\\\]/g, '')// Remove markdown and pipe symbols\n  .replace(/[“”‘’\"']/g, '')       // Remove smart quotes and normal quotes\n  .replace(/[^\\x20-\\x7E]/g, '')   // Remove non-ASCII/unreadable chars\n  .trim();                        // Trim leading/trailing spaces\n\nreturn {\n  json: {\n    cleaned_text: text\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1248,
+        80
+      ],
+      "id": "49a610cd-d1cc-45a0-86c0-fb3fe7dde233",
+      "name": "cleaning description"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Function Node: Generate Unique ID and Format Output\n\n// The execution context must be changed to map over the input array 'items'\nconst outputData = items.map((item, index) => {\n    \n    // Data is accessed directly from the current item in the map loop\n    const inputData = item.json;\n\n    // --- Access and Clean Data ---\n    // Safely access the necessary fields:\n    const name = inputData.name || inputData.candidate_name || 'Unknown';\n    const description = inputData.cleaned_text || inputData.description || '';\n    \n    // Keep other score properties that are already on the item\n    const score = inputData.score;\n    const matchedCount = inputData.matched_count;\n    const totalJDCount = inputData.total_jd_count;\n    \n    // --- Generate a unique ID (FINAL FIX) ---\n    // Uses the array index (index) for GUARANTEED uniqueness.\n    const uniqueId = `RESUME-${Date.now()}-${Math.floor(Math.random() * 1000)}-${index}`;\n\n    // --- Build the output object ---\n    return {\n        json: {\n            id: uniqueId,\n            name: name,\n            description: description,\n            // Include existing score fields\n            score: score,\n            matched_count: matchedCount,\n            total_jd_count: totalJDCount\n            // Add any other fields you need for the spreadsheet\n        }\n    };\n});\n\n// The map function returns the correctly structured output array\nreturn outputData;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1472,
+        80
+      ],
+      "id": "14bf59dd-304a-4232-9397-2347978dfd65",
+      "name": "ID"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        352,
+        -248
+      ],
+      "id": "0a93bafb-b089-4f62-adb6-506c9c1328a9",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "1fFQSUE6a5sdSpeMGu0t6CxU1Jl8e7tResPTJbvPpQf0",
+          "mode": "list",
+          "cachedResultName": "Resume Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fFQSUE6a5sdSpeMGu0t6CxU1Jl8e7tResPTJbvPpQf0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fFQSUE6a5sdSpeMGu0t6CxU1Jl8e7tResPTJbvPpQf0/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        -248
+      ],
+      "id": "4c36a720-6c61-4bd7-ace2-da841c13b9e4",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleApi": {
+          "id": "l8DihPEEZpZGiAA1",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// n8n Code node: Pick Top 3 and prepare concise prompt\n// Input: items from \"Get again row(s) in n8n resume\"\n// Output: a single item with a clean prompt for the LLM\n\nconst all = $input.all().map(i => i.json || {});\n\n// Normalize numeric rank; prefer \"Rank\" then \"Total Score\"\nconst rows = all\n  .map(r => {\n    const rankRaw = r.Rank ?? r['Rank'] ?? r.rank ?? r['#'] ?? r.ID ?? null;\n    const scoreRaw = r['Total Score'] ?? r['TotalScore'] ?? r.total_score ?? r['Total Score'];\n    const parsedRank = rankRaw ? parseInt(rankRaw, 10) : null;\n    const parsedScore = scoreRaw ? parseFloat(scoreRaw) : null;\n    return {\n      raw: r,\n      rank: Number.isFinite(parsedRank) ? parsedRank : null,\n      score: Number.isFinite(parsedScore) ? parsedScore : null\n    };\n  });\n\n// Prefer sorting by rank if any rows have numeric rank, otherwise by score descending\nlet topSorted;\nif (rows.some(r => r.rank !== null)) {\n  topSorted = rows.filter(r => r.rank !== null).sort((a,b) => a.rank - b.rank);\n} else {\n  topSorted = rows.filter(r => r.score !== null).sort((a,b) => b.score - a.score);\n}\n\n// Pick top 3\nconst top3 = topSorted.slice(0, 3);\n\n// Prepare candidate summaries\nconst summaries = top3.map((r, idx) => {\n  const src = r.raw;\n  const name = (src.Name || src.name || '').toString().trim() || 'Candidate ' + (idx + 1);\n  const rank = r.rank ?? (idx + 1);\n  const score = r.score ? r.score.toFixed(2) : 'N/A';\n  const matched = (src['Matched Keywords'] || src['Matched Keywords'] || src.matched || '').toString();\n  const matchPct = (src['Match %'] || src['Match %'] || '').toString();\n  const jd = (src['Job Description'] || src['Job Description'] || src.description || src.JD || '').toString();\n  \n  // Snippet: first 40 words\n  const snippet = jd.split(/\\s+/).slice(0, 40).join(' ').trim() + '...';\n  \n  return {\n    name,\n    rank,\n    score,\n    matched,\n    matchPct,\n    snippet\n  };\n});\n\n// Build a single, direct prompt\nconst prompt = `Create a professional HTML email for HR listing the top 3 candidates for an AI/ML Developer position.\n\nCANDIDATES:\n${summaries.map((s, i) => `\n${i + 1}. ${s.name}\n   - Rank: ${s.rank} | Score: ${s.score} | Match: ${s.matchPct}%\n   - Key Skills: ${s.matched || 'Not specified'}\n   - Summary: ${s.snippet}\n`).join('\\n')}\n\nREQUIREMENTS:\n- Output ONLY valid HTML (no markdown, no backticks, no commentary)\n- Use inline CSS styles for email compatibility\n- Include a subject line as <h2>\n- Create 3 candidate blocks with: name (bold), rank/score, skills, and brief summary\n- End with: \"View full resumes at: https://docs.google.com/spreadsheets/d/1iN3WxqEpNZEHtUdRYGykNpQf4RfcLzOmlTLFtkPf5Lk/edit\"\n- Keep it concise (under 300 words total)\n- Use professional, recruiter-friendly language\n\nOutput the HTML now:`;\n\nreturn {\n  json: {\n    chatInput: prompt,\n    candidate_count: summaries.length,\n    // Debug preview for testing\n    debug_summary: summaries.map(s => `${s.name} (Rank ${s.rank}, Score ${s.score})`).join('; ')\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        -248
+      ],
+      "id": "e989acb7-0dfa-427a-978a-b018dbaefeb5",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        1024,
+        -352
+      ],
+      "id": "7df5cb2a-68e9-46e2-b279-0f67e4507599",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1096,
+        -128
+      ],
+      "id": "8cf2a4f8-01e2-4071-8e87-2ad33cc691c5",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "ptPpq9PzUeKtmyJA",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# RESUME RANKING - MINIMAL UPGRADE\n# Drop-in replacement for your existing \"Rank Resumes\" node\n# Adds: Tokenization, Stopwords, Cosine Similarity (NO OTHER CHANGES)\n\nimport re\nfrom datetime import datetime\nfrom collections import Counter\nimport math\n\n# Read input\nitems = _input.all()\n\nif not items:\n    return [{\"json\": {\"info\": \"No input items\", \"received_items\": 0}}]\n\n# ============================================\n# SIMPLE NLP ADDITIONS (20 lines total)\n# ============================================\n\n# Basic stopwords (most common English words to ignore)\nSTOP = set(['the','a','an','and','or','but','in','on','at','to','for','of','with','is','are','was','were','be','have','has','had','do','does','i','you','he','she','it','we','they','my','your','this','that'])\n\ndef tokenize(text):\n    \"\"\"Simple tokenization: lowercase + split into words\"\"\"\n    if not text:\n        return []\n    return re.findall(r'\\b[a-z0-9]+\\b', text.lower())\n\ndef remove_stopwords(tokens):\n    \"\"\"Remove common words\"\"\"\n    return [t for t in tokens if t not in STOP and len(t) > 2]\n\ndef cosine_sim(vec1, vec2):\n    \"\"\"Calculate cosine similarity between two word-count dictionaries\"\"\"\n    common = set(vec1.keys()) & set(vec2.keys())\n    if not common:\n        return 0.0\n    \n    dot = sum(vec1[k] * vec2[k] for k in common)\n    mag1 = math.sqrt(sum(v**2 for v in vec1.values()))\n    mag2 = math.sqrt(sum(v**2 for v in vec2.values()))\n    \n    return dot / (mag1 * mag2) if mag1 and mag2 else 0.0\n\n# ============================================\n# YOUR ORIGINAL CODE (Unchanged)\n# ============================================\n\njob_keywords = [\n    'python', 'machine learning', 'ml', 'ai', 'artificial intelligence',\n    'nlp', 'deep learning', 'tensorflow', 'pytorch', 'scikit-learn',\n    'data analysis', 'eda', 'pandas', 'numpy', 'sql', 'mysql',\n    'automation', 'n8n', 'make', 'api', 'git', 'github',\n    'computer vision', 'neural networks', 'classification', 'regression',\n    'c++', 'algorithms', 'data structures', 'opencv', 'django', 'flask'\n]\n\nTOTAL_KEYWORDS = len(job_keywords)\n\n# Weights (unchanged)\nKEYWORD_MATCH_WEIGHT = 10\nMATCH_PERCENTAGE_WEIGHT = 5\nEXPERIENCE_WEIGHT = 3\nEDUCATION_WEIGHT = 2\n\ndef calculate_keyword_score(text, keywords):\n    \"\"\"Original keyword matching (unchanged)\"\"\"\n    if not text:\n        return 0, [], [], 0\n    low = text.lower()\n    matched, missing = [], []\n    for kw in keywords:\n        if kw.lower() in low:\n            matched.append(kw)\n        else:\n            missing.append(kw)\n    count = len(matched)\n    pct = (count / len(keywords) * 100) if keywords else 0\n    return count, matched, missing, pct\n\ndef extract_experience_years(text):\n    \"\"\"Original experience extraction (unchanged)\"\"\"\n    if not text:\n        return 0\n    matches = re.findall(r'(\\d{4})\\s*[-–]\\s*(\\d{4}|present|current)', text.lower())\n    cur = datetime.now().year\n    years = 0\n    for s, e in matches:\n        try:\n            start = int(s)\n            end = cur if e in ['present', 'current'] else int(e)\n            years = max(years, end - start)\n        except:\n            continue\n    return years\n\ndef check_education(text):\n    \"\"\"Original education scoring (unchanged)\"\"\"\n    if not text:\n        return 0\n    t = text.lower()\n    if 'phd' in t or 'doctorate' in t:\n        return 10\n    if 'master' in t or 'm.s.' in t or 'ms ' in t:\n        return 8\n    if 'bachelor' in t or 'b.s.' in t or 'bs ' in t:\n        return 6\n    if 'associate' in t or 'diploma' in t:\n        return 4\n    if 'a level' in t or 'a-level' in t:\n        return 3\n    return 1\n\ndef relevance(pct):\n    \"\"\"Original relevance classification (unchanged)\"\"\"\n    if pct >= 70:\n        return \"Highly Relevant\"\n    if pct >= 50:\n        return \"Relevant\"\n    if pct >= 30:\n        return \"Somewhat Relevant\"\n    return \"Not Relevant\"\n\n# ============================================\n# MAIN PROCESSING (Only 3 NEW lines added)\n# ============================================\n\n# NEW: Tokenize job description for similarity calculation\njob_tokens = remove_stopwords(tokenize(' '.join(job_keywords)))\njob_vec = Counter(job_tokens)\n\nranked = []\n\nfor idx, item in enumerate(items, start=1):\n    data = item.get('json', {})\n    sheet_hash = data.get('#') or data.get('ID') or f\"resume-{idx}\"\n    name = (data.get('Name') or '').strip()\n    text = (data.get('Job Description') or data.get('description') or '').strip()\n\n    if not text or len(text) < 50:\n        continue\n\n    # Original keyword matching\n    match_count, matched, missing, pct = calculate_keyword_score(text, job_keywords)\n    \n    # NEW: Tokenize resume and calculate cosine similarity\n    resume_tokens = remove_stopwords(tokenize(text))\n    resume_vec = Counter(resume_tokens)\n    similarity = cosine_sim(job_vec, resume_vec)\n    \n    # Original scoring\n    years = extract_experience_years(text)\n    edu = check_education(text)\n\n    # Original score calculation (unchanged)\n    score = (match_count * KEYWORD_MATCH_WEIGHT) + (pct * MATCH_PERCENTAGE_WEIGHT) + (years * EXPERIENCE_WEIGHT) + (edu * EDUCATION_WEIGHT)\n\n    ranked.append({\n        \"#\": sheet_hash,\n        \"ID\": sheet_hash,\n        \"Name\": name,\n        \"Job Description\": text,\n        \"Role\": \"AI/ML Developer\",\n        \"Matched Keywords\": \", \".join(matched),\n        \"Missing Keywords\": \", \".join(missing),\n        \"Match Count\": match_count,\n        \"Total Keywords\": TOTAL_KEYWORDS,\n        \"Match %\": round(pct, 2),\n        \"Cosine Similarity\": round(similarity, 4),  # NEW: Added this field\n        \"Experience Years\": years,\n        \"Education Score\": edu,\n        \"Total Score\": round(score, 2),\n        \"Relevance\": relevance(pct)\n    })\n\n# Original sorting and ranking\nranked.sort(key=lambda x: x[\"Total Score\"], reverse=True)\nfor i, r in enumerate(ranked, start=1):\n    r[\"Rank\"] = i\n\nreturn [{\"json\": r} for r in ranked]"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1696,
+        80
+      ],
+      "id": "d4362138-e9f7-4361-aa58-b34d7ca52413",
+      "name": "NLP"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Clean up LLM output to ensure pure HTML\nlet output = $json.output || '';\n\n// Remove markdown code blocks if present\noutput = output.replace(/```html\\n?/gi, '').replace(/```\\n?/g, '');\n\n// Remove any <think> tags or reasoning sections (some models add these)\noutput = output.replace(/<think>[\\s\\S]*?<\\/think>/gi, '');\n\n// Remove leading/trailing whitespace\noutput = output.trim();\n\n// If output doesn't start with HTML tag, try to find where HTML starts\nif (!output.startsWith('<')) {\n  const htmlMatch = output.match(/(<[^>]+>[\\s\\S]*)/);\n  if (htmlMatch) {\n    output = htmlMatch[1];\n  }\n}\n\n// Fallback: if still no valid HTML, create a simple message\nif (!output.includes('<') || !output.includes('>')) {\n  output = `<div style=\"font-family: Arial, sans-serif; padding: 20px;\">\n    <p>Error: Unable to generate HTML email. Please check the workflow.</p>\n    <p>Raw output: ${output.substring(0, 200)}</p>\n  </div>`;\n}\n\nreturn {\n  json: {\n    cleaned_html: output,\n    char_count: output.length\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1376,
+        -248
+      ],
+      "id": "e77555a3-b173-4562-be5c-1c7ba6e3275c",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "fromEmail": "haider.ali.athar17@gmail.com",
+        "toEmail": "haideraliathar.ai@gmail.com",
+        "subject": "Top ranked Resumes",
+        "html": "={{ $json.cleaned_html }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        1600,
+        -248
+      ],
+      "id": "2eada23c-c9bb-496b-bc79-00f21e5f8e30",
+      "name": "Send email",
+      "webhookId": "d8815823-9d55-4e3a-8d7a-612a1847ffd0",
+      "credentials": {
+        "smtp": {
+          "id": "69gbSShnA4h7vQwE",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Append or update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "cleaning description",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cleaning description": {
+      "main": [
+        [
+          {
+            "node": "ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ID": {
+      "main": [
+        [
+          {
+            "node": "NLP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NLP": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Send email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a3ad0817-88ec-4fc8-b5d0-12d66e432965",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a137b30177ea3d3dce12707f623aef606cc88566f7a1f1278f29b841f4f55239"
+  },
+  "id": "sL96Wlp63PV5cytt",
+  "tags": []
+}
